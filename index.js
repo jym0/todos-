@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const span = document.createElement("span");
     span.textContent = task.text;
 
-    // Apply line-through style if the task is completed
     if (task.completed) {
       span.style.textDecoration = "line-through";
       span.style.color = "#ffd791bb";
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Save the tasks to local storage
+
 function saveTasks() {
   const tasks = [...listTask.children].map((item) => {
     const icon = item.querySelector("i.bi");
